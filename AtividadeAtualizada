@@ -1,0 +1,65 @@
+public static String nome;
+public static String cpf;
+
+        public static void exercicio1(){
+        nome = JOptionPane.showInputDialog("Qual seu nome?");
+        cpf = JOptionPane.showInputDialog("Qual seu cpf?");
+        JOptionPane.showMessageDialog(null, "Seu nome é: " + nome + "\nSeu CPF é: " + cpf);
+        bonus();
+    }
+    
+    public static void exercicio2(){
+         int contador = 1;
+        while (contador <= 10) {
+            JOptionPane.showMessageDialog(null, "Janela número: " + contador);
+            contador = contador + 1;
+        }
+        bonus();
+    }
+    
+    public static void exercicio3(){
+        
+        String opcao = JOptionPane.showInputDialog("Escolha uma opção:\n1 - Dizer oi\n2 - Mostrar dados\n3 - Sair");
+
+        if (opcao.equals("1")) {
+            JOptionPane.showMessageDialog(null, "Oi, " + nome + "! Tudo bem?");
+        }
+
+        else if (opcao.equals("2")) {
+            JOptionPane.showMessageDialog(null, "Seus dados são:\nNome: " + nome + "\nCPF: " + cpf);
+        }
+
+        else if (opcao.equals("3")) {
+            JOptionPane.showMessageDialog(null, "Até a próxima!");
+        }
+
+        else {
+            JOptionPane.showMessageDialog(null, "Opção inválida. Tente de novo.");
+            exercicio3();
+        }
+            bonus();
+            
+    }
+    public static void bonus(){
+        String hehe = JOptionPane.showInputDialog("Qual atividade o senhor gostaria de ver?\n Atividade 1\n Atividade 2\n Atividade 3");
+        
+            if (hehe.equals("Atividade 1")) {
+            exercicio1();
+        }
+            else if (hehe.equals("Atividade 2")) {
+            exercicio2();
+        }
+            else if (hehe.equals("Atividade 3")) {
+            exercicio3();
+        }
+            else{
+                JOptionPane.showMessageDialog(null, "Opção inválida. Tem que literalmente escrever Atividade 1 pra funcionar :P");
+            }
+            bonus();
+    }
+    
+    public static void main(String[] args) {
+     
+         bonus();
+    }
+    
