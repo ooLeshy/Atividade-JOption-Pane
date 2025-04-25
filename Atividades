@@ -1,0 +1,71 @@
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author saulo
+ */
+public class Atividade3 {
+
+    
+    public static void exercicio1(){
+        String nome = JOptionPane.showInputDialog("Qual seu nome?");
+        String cpf = JOptionPane.showInputDialog("Qual seu cpf?");
+        JOptionPane.showMessageDialog(null, "Seu nome é: " + nome + "Seu CPF é: " + cpf);
+    }
+    
+    public static void exercicio2(){
+         int contador = 1;
+        while (contador <= 10) {
+            JOptionPane.showMessageDialog(null, "Janela número: " + contador);
+            contador = contador + 1;
+        }
+    }
+    
+    public static void exercicio3(){
+        String nome = "Alexandre";
+        String profissao = "Professor";
+        String opcao = JOptionPane.showInputDialog("Escolha uma opção:\n1 - Dizer oi\n2 - Mostrar dados\n3 - Sair");
+
+        //se a pessoa escolher 1
+        if (opcao.equals("1")) {
+            JOptionPane.showMessageDialog(null, "Oi, " + nome + "! Tudo bem?");
+        }
+
+        //se a pessoa escolher 2
+        else if (opcao.equals("2")) {
+            JOptionPane.showMessageDialog(null, "Seus dados são:\nNome: " + nome + "\nProfissao: " + profissao);
+        }
+
+        //se a pessoa escolher 3
+        else if (opcao.equals("3")) {
+            JOptionPane.showMessageDialog(null, "Até a próxima!");
+        }
+
+        //se a pessoa digitar algo errado
+        else {
+            JOptionPane.showMessageDialog(null, "Opção inválida. Tente de novo.");
+        }
+    }
+    public static void bonus(){
+        String hehe = JOptionPane.showInputDialog("Qual atividade o senhor gostaria de ver?\n Atividade 1\n Atividade 2\n Atividade 3");
+        
+            if (hehe.equals("Atividade 1")) {
+            exercicio1();
+        }
+            else if (hehe.equals("Atividade 2")) {
+            exercicio2();
+        }
+            else if (hehe.equals("Atividade 3")) {
+            exercicio3();
+        }
+            else{
+                JOptionPane.showMessageDialog(null, "Opção inválida. Tem que literalmente escrever Atividade 1 pra funcionar :P");
+            }
+    }
+    
+    public static void main(String[] args) {
+     
+         bonus();
+    }
+    
+}
